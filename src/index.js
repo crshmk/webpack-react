@@ -1,7 +1,8 @@
-import './index.css'
-import sunbeam from './sunbeam.jpeg'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-let x = 2345
+import App from './App'
 
+const root = document.getElementsByTagName('div')[0]
 
-
+ReactDOM.render(<App />, root)
