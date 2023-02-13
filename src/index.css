@@ -1,4 +1,36 @@
+/*
+@font-face {
+  font-family: 'my-font';
+  src: url(assets/the-font.otf);
+}
+*/
+
 body {
   margin: 0;
   padding: 0;
+  background-color: rgb(42, 40, 47);
+  color: rgb(221, 221, 222);
+  /* font-family: 'my-font'; */
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  background-color: transparent;
+  margin-bottom: 7px;
+}
+li:hover {
+  background-color: rgb(80, 76, 86);
+}
+
+.divider {
+  width: 80%;
+  margin: 0 auto;
+  height: 1px;
+  border-radius: 50%;
+  background-color: rgb(78, 76, 83);
 }

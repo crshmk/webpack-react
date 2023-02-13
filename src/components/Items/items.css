@@ -1,0 +1,10 @@
+ul {
+  padding: 17px 5%;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 3px 17px;
+  border-radius: 3px;
+}

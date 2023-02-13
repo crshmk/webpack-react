@@ -1,10 +1,16 @@
 import React from 'react'
 
 import './index.css'
-import sunbeam from './sunbeam.jpeg'
 
-const App = () => 
-  <p>app</p>
+import Header from './components/Header'
+import Items from './components/Items'
+
+const App = () => (
+  <>
+    <Header />
+    <Items />
+  </>
+)
 
 export default App
 
