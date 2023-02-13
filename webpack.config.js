@@ -47,8 +47,8 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     liveReload: true,
-    open: true,
-    port: 4200,
+    open: false,
+    port: 7000,
     static: resolve('dist')
   }
 }
