@@ -1,16 +1,22 @@
-/*
 @font-face {
-  font-family: 'my-font';
-  src: url(assets/the-font.otf);
+  font-family: 'inter-med';
+  src: url(assets/fonts/Inter-Medium.otf);
 }
-*/
+@font-face {
+  font-family: 'inter-light';
+  src: url(assets/fonts/Inter-Light.otf);
+}
 
 body {
   margin: 0;
   padding: 0;
   background-color: rgb(42, 40, 47);
   color: rgb(221, 221, 222);
-  /* font-family: 'my-font'; */
+  font-family: 'inter-light';
+}
+
+h1 {
+  font-family: 'inter-med';
 }
 
 ul, li {

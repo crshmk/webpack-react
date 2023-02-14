@@ -6,6 +6,7 @@
   "scripts": {
     "build:renderer": "webpack",
     "build:app": "npx electron-packager . menu-bar-app --overwrite",
+    "start": "webpack s",
     "test": "jest",
     "dev": "concurrently -k \"BROWSER=none npm start\" \"npm:electron\"",
     "electron": "wait-on tcp:7000 && electron ."
