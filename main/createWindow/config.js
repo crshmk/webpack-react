@@ -12,10 +12,11 @@ const config = {
   resizable: false,
   frame: false,
   transparent: true,
-  show: true,
+  show: false,
   webPreferences: {
     nodeIntegration: true,
-    preload: preloadPath
+    preload: preloadPath,
+    webSecurity: false
   }
 }
 

@@ -3,7 +3,7 @@ const isDev = require('electron-is-dev')
 
 const devUrl = 'http://localhost:7000'
 
-const prodBuildPath = path.join(__dirname, '../build/index.html')
+const prodBuildPath = path.join(__dirname, '../../dist/index.html')
 
 const prodUrl = `file://${prodBuildPath}`
 
