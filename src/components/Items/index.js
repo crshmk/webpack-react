@@ -2,12 +2,18 @@ import React from 'react'
 
 import './items.css'
 
-const Items = () => (
-  <ul>
-    <li>one</li>
-    <li>two</li>
-  </ul>
-)
+import useStore from '../../store'
 
+const makeItem = (item, i) => <li key={item+i}>{item}</li>
+
+const Items = () => {
+  const { items } = useStore()
+
+  return (
+    <ul>
+      {items.map(makeItem)}
+    </ul>
+  ) 
+} 
 
 export default Items
