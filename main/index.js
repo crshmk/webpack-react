@@ -13,6 +13,8 @@ function launchApp() {
 
 app.whenReady().then(launchApp)
 
+app.dock.hide()
+
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow()
