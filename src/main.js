@@ -1,12 +1,13 @@
 const path = require('path')
 const isDev = require('electron-is-dev')
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 
 const windowConfig = {
   width: 800,
   height: 600,
   webPreferences: {
     nodeIntegration: true,
+    preload: path.join(__dirname, 'preload.js')
   },
 }
 
@@ -20,6 +21,11 @@ function createWindow() {
   window.loadURL(url)
 
   if (isDev) window.webContents.openDevTools()
+
+  ipcMain.on('toMain', (e, payload) => {
+    const response = payload.replace('to', 'from')
+    window.webContents.send('fromMain', response);
+  })
 }
 
 app.whenReady().then(createWindow)
