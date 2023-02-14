@@ -2,7 +2,7 @@
   "name": "webpack-react",
   "version": "1.0.0",
   "description": "Basic Webpack React Jest setup for 2022",
-  "main": "src/main.js",
+  "main": "main/index.js",
   "scripts": {
     "build": "webpack",
     "start": "webpack s",

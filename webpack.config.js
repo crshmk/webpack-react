@@ -6,7 +6,7 @@ const resolve = filePath => path.resolve(__dirname, filePath)
 module.exports = {
   mode: 'development',
   entry: {
-    main: resolve('src/index.js')
+    main: resolve('renderer/index.js')
   },
   output: {
     assetModuleFilename: '[name][ext]',
@@ -39,7 +39,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: resolve('src/index.html')
+      template: resolve('renderer/index.html')
     })
   ],
   devtool: 'inline-source-map',
