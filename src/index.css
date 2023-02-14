@@ -34,9 +34,12 @@ button {
   border-radius: 3px;
 }
 
+.window {
+  margin: 0 10%;
+}
+
 .divider {
-  width: 80%;
-  margin: 0 auto;
+  margin: 10px auto;
   height: 1px;
   border-radius: 50%;
   background-color: rgb(78, 76, 83);

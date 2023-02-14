@@ -9,10 +9,10 @@ const AddItemButton = () => {
 
   return (
     <>
-    <div className="divider"></div>
     <div className="add-item-button">
       <button onClick={pingIpc}>add item</button>
     </div>
+    <div className="divider"></div>
     </>
   )
 }

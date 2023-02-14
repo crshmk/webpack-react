@@ -1,4 +1,5 @@
 const path = require('path')
+const { exec } = require('child_process')
 const isDev = require('electron-is-dev')
 const { 
   app, 
@@ -12,7 +13,7 @@ const iconPath = path.join(__dirname, 'assets/icon.png')
 
 const showDevTools = false
 const width = showDevTools ? 1200 : 250
-const height = showDevTools ? 500 : 250
+const height = showDevTools ? 500 : 350
 
 const windowConfig = {
   width,
@@ -42,6 +43,16 @@ const toggleWindow = window => () => {
   window.show()
 }
 
+const callBashScript = window => () => {
+  const pathToScript = path.join(__dirname, './scripts/test.sh')
+  exec(pathToScript, (error, stdout, stderr) => { 
+    const err = error?.message || stderr?.message || ''
+    const response = stdout || ''
+    window.webContents.send('std-err-from-bash-script', err)
+    window.webContents.send('std-out-from-bash-script', response)
+  })
+}
+
 function createWindow() {
   const window = new BrowserWindow(windowConfig)
   window.loadURL(url)
@@ -51,17 +62,19 @@ function createWindow() {
 
   if (showDevTools) window.webContents.openDevTools()
 
-  ipcMain.on('toMain', (e, payload) => {
+  ipcMain.on('to-main', (e, payload) => {
     const response = payload.replace('to', 'from')
-    window.webContents.send('fromMain', response);
+    window.webContents.send('from-main', response)
   })
 
+  ipcMain.on('call-bash-script', callBashScript(window))
+
   window.on('close', () => {
-    window = null;
+    window = null
   })
 
   window.on('blur', () => {
-    window.hide();
+    window.hide()
   })
 }
 
