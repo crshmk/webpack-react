@@ -2,8 +2,8 @@ const path = require('path')
 
 const preloadPath = path.join(__dirname, 'preload.js')
 
-const showDevTools = true
-const width = showDevTools ? 1200 : 250
+const showDevTools = false
+const width = showDevTools ? 1000 : 300
 const height = showDevTools ? 500 : 350
 
 const config = {

@@ -8,7 +8,7 @@ import React, {
 const StoreContext = createContext()
 const useStore = () => useContext(StoreContext)
 
-const defaultItems = ['one', 'two']
+const defaultItems = ['Battery Preferences', 'Your Keyboard']
 
 export const StoreProvider = props => {
   const [items, setItems] = useState(defaultItems)

@@ -12,8 +12,8 @@ const StdOut = () => {
       <div>
         <button onClick={callBashScript}>execute script</button>
       </div>
-      <p>{stdOut}</p>
-      <p className="error-message">{stdErr}</p>
+      <p className="subtext">{stdOut}</p>
+      <p className="subtext">{stdErr}</p>
     </div>
   )
 }
