@@ -2,10 +2,9 @@ import React from 'react'
 
 import './index.css'
 
-import AddItemButton from './components/AddItemButton'
+import Buttons from './components/Buttons'
 import Header from './components/Header'
-import Items from './components/Items'
-import StdOut from './components/StdOut'
+import Output from './components/Output'
 import { StoreProvider } from './store'
 import Quit from './components/Quit'
 
@@ -13,9 +12,10 @@ const App = () => (
   <div className="window">
     <StoreProvider>
       <Header />
-      <Items />
-      <AddItemButton />
-      <StdOut />
+      <Buttons />
+      <div className="divider" />
+      <Output />
+      <div className="divider" />
       <Quit />
     </StoreProvider>
   </div>

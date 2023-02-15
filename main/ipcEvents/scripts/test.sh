@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo stdout from the test script
+echo StdOut from the Test Script

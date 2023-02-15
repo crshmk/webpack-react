@@ -8,31 +8,26 @@ import React, {
 const StoreContext = createContext()
 const useStore = () => useContext(StoreContext)
 
-const defaultItems = ['Battery Preferences', 'Your Keyboard']
-
 export const StoreProvider = props => {
-  const [items, setItems] = useState(defaultItems)
+  const [ipcMessage, setIpcMessage] = useState('')
   const [stdOut, setStdOut] = useState('')
   const [stdErr, setStdErr] = useState('')
 
   const pingIpc = () => {
-    window.ipc.send('to-main', 'data to main')
+    window.ipc.send('to-main', 'Payload to Main')
   }
 
-  const addItem = item => 
-    setItems(prevItems => [...prevItems, item])
-
   const callBashScript = () => {
-    window.ipc.send('call-bash-script', 'data to main')
+    window.ipc.send('call-bash-script')
   }
 
   useEffect(() => {
-    window.ipc.receive('from-main', addItem)
+    window.ipc.receive('from-main', setIpcMessage)
     window.ipc.receive('std-out-from-bash-script', setStdOut)
     window.ipc.receive('std-err-from-bash-script', setStdErr)
   }, [])
 
-  const ctx = { callBashScript, items, pingIpc, stdErr, stdOut }
+  const ctx = { callBashScript, ipcMessage, pingIpc, stdErr, stdOut }
 
   return (
     <StoreContext.Provider value={ctx}>
