@@ -1,7 +1,7 @@
 {
-  "name": "webpack-react",
+  "name": "electron-react-menu-bar",
   "version": "1.0.0",
-  "description": "Basic Webpack React Jest setup for 2022",
+  "description": "Electron/React menu bar boilerplate with no Typescript",
   "main": "main/index.js",
   "scripts": {
     "build:renderer": "webpack",
@@ -12,6 +12,9 @@
     "electron": "wait-on tcp:7000 && electron ."
   },
   "keywords": [
+    "electron",
+    "react",
+    "menubar",
     "webpack"
   ],
   "author": "Chris Hammock",
