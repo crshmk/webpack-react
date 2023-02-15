@@ -49,6 +49,17 @@ li:hover {
   background-color: rgb(80, 76, 86);
 }
 
+input {
+  width: 100%;
+  background-color: transparent;
+  padding: 3px 7px;
+  border: 1px solid rgb(237,237,237);
+  border-radius: 7px;
+  color: rgb(237,237,237);
+  outline: 0;
+  font-size: 14px;
+}
+
 button {
   background-color: transparent;
   color: rgb(221, 221, 222);
