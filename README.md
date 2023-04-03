@@ -5,3 +5,6 @@
 
 - CSS modules 
 - React Testing Library
+
+Features:
+No Typescript 
