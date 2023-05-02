@@ -1,7 +1,7 @@
 - Webpack 5
-- Jest 27 
+- Jest 29 
 - Babel 7
-- React 17 
+- React 18 
 
 - CSS modules 
 - React Testing Library
