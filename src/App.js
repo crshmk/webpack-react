@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { lazy } from 'react'
+
+const Page = lazy(() => import('./Page') )
 
 import './index.css'
-import sunbeam from './sunbeam.jpeg'
 
 const App = () => 
-  <p>app</p>
+  <Page />
 
 export default App
 
