@@ -2,7 +2,7 @@ import React from 'react'
 
 import './page.css'
 
-import sunbeam from '../../assets/img/sunbeam.jpeg'
+import sunbeam from '@img/sunbeam.jpeg'
 
 const Page = () => (
   <div className="page">
