@@ -1,4 +1,6 @@
 const path = require('path')
+const webpack = require('webpack')
+
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const resolve = filePath => path.resolve(__dirname, filePath)
@@ -41,7 +43,6 @@ module.exports = {
       template: resolve('src/index.html')
     })
   ],
-
   resolve: {
     modules: [
         path.join(__dirname, 'node_modules')

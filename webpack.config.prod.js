@@ -1,8 +1,10 @@
 const path = require('path')
+
+const webpack = require('webpack')
+const common = require('./webpack.config.common.js')
+
 const TerserPlugin = require('terser-webpack-plugin')
 const { merge } = require('webpack-merge')
-
-const common = require('./webpack.config.common.js')
 
 const resolve = filePath => path.resolve(__dirname, filePath)
 
@@ -11,7 +13,7 @@ module.exports = merge(common, {
   entry: {
     main: resolve('src/index.js'),
     page: resolve('src/components/Page/index.js'),
-    vendor: ['react', 'react-dom']
+    vendor: ['react', 'react-dom', 'axios', 'ramda', 'qs']
   },
   optimization: {
     minimize: true,
@@ -24,5 +26,10 @@ module.exports = merge(common, {
       chunks: 'all',
       minSize: 20000,
     }
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      process: { env: { isProduction: true } }
+    })
+  ]
 })
