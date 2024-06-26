@@ -1,6 +1,6 @@
 import React, { lazy } from 'react'
 
-const Page = lazy(() => import('./Page') )
+const Page = lazy(() => import('./components/Page') )
 
 import './index.css'
 

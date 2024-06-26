@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const resolve = filePath => path.resolve(__dirname, filePath)
 
 module.exports = {
-  mode: 'development',
   entry: {
     main: resolve('src/index.js')
   },
@@ -42,13 +41,10 @@ module.exports = {
       template: resolve('src/index.html')
     })
   ],
-  devtool: 'inline-source-map',
-  devServer: {
-    historyApiFallback: true,
-    hot: true,
-    liveReload: true,
-    open: true,
-    port: 4200,
-    static: resolve('dist')
-  }
+
+  resolve: {
+    modules: [
+        path.join(__dirname, 'node_modules')
+    ]
+}
 }
