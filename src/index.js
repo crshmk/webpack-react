@@ -7,5 +7,27 @@ const container = document.getElementsByTagName('div')[0]
 
 const root = createRoot(container)
 
-root.render(<App  />)
+const renderApp = () => root.render(<App  />)
 
+// delay render until fonts arrive
+if(!!document.fonts?.ready) {
+
+  let hasLoaded = false 
+
+  setTimeout(() => {
+    if(!hasLoaded) {
+      hasLoaded = true 
+      renderApp()
+    }
+  }, 3000)
+
+  document.fonts.ready.then((fontFaceSet) => {
+    if(!hasLoaded) {
+      hasLoaded = true
+      renderApp()
+    }
+    hasLoaded = true
+  })
+} else {
+  renderApp()
+}
