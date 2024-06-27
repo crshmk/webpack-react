@@ -5,3 +5,11 @@ body {
   font-weight: 300;
   font-style: normal;  
 }
+
+li {
+  list-style-type: none;
+}
+
+.view {
+  margin: 27px;
+}

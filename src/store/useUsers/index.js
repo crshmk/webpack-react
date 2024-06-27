@@ -12,7 +12,7 @@ import fetchUsers from './fetchUsers'
 const UsersContext = createContext()
 const useUsers = () => useContext(UsersContext)
 
-export const UserProvider = ({ children }) => {
+export const UsersProvider = ({ children }) => {
   const [users, setUsers] = useState([])
   const { showMessage } = useMessage()
   

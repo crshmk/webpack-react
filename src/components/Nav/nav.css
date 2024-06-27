@@ -1,0 +1,8 @@
+nav ul {
+  display: flex;
+  gap: 27px;
+}
+
+nav ul li a.active {
+  color: steelblue;
+}

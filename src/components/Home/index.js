@@ -1,7 +1,7 @@
 import React from 'react'
 import { isAbsent } from 'ramjam' 
 
-import './page.css'
+import './home.css'
 
 import sunbeam from '@img/sunbeam.jpeg'
 
@@ -12,13 +12,13 @@ const ErrorMessage = () => {
   return isAbsent(errorMessage) ? null : <p>{errorMessage}</p>
 }
 
-const Page = () => {
+const Home = () => {
   return (
-    <div className="page">
+    <div className="home">
       <img src={sunbeam} />
       <ErrorMessage />
     </div>
   )
 }
 
-export default Page
+export default Home

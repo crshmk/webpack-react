@@ -8,12 +8,21 @@ const { merge } = require('webpack-merge')
 
 const resolve = filePath => path.resolve(__dirname, filePath)
 
+const vendorChunks = [
+  'react', 
+  'react-dom', 
+  'react-router-dom', 
+  'axios', 
+  'ramda', 
+  'qs'
+]
+
 module.exports = merge(common, {
   mode: 'production',
   entry: {
     main: resolve('src/index.js'),
     page: resolve('src/components/Page/index.js'),
-    vendor: ['react', 'react-dom', 'axios', 'ramda', 'qs']
+    vendor: vendorChunks
   },
   optimization: {
     minimize: true,
