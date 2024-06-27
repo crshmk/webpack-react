@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Nav from '@components/Nav'
 import Providers from '@store/Providers'
 import Routes from './Routes'
+import ScrollToTop from './ScrollToTop'
 
 import './index.css'
 
@@ -16,6 +17,7 @@ const View = () => (
 
 const App = () => (
   <Router>
+  <ScrollToTop />
   <Providers>
   <View />
   </Providers>
