@@ -7,6 +7,8 @@ import sunbeam from '@img/sunbeam.jpeg'
 
 import useMessage from '@store/useMessage'
 
+import FadeIn from '@components/FadeIn'
+
 const ErrorMessage = () => {
   const { errorMessage } = useMessage()
   return isAbsent(errorMessage) ? null : <p>{errorMessage}</p>
@@ -14,10 +16,12 @@ const ErrorMessage = () => {
 
 const Home = () => {
   return (
+    <FadeIn>
     <div className="home">
       <img src={sunbeam} />
       <ErrorMessage />
     </div>
+    </FadeIn>
   )
 }
 

@@ -4,6 +4,7 @@ import './users.css'
 
 import useUsers from '@store/useUsers'
 
+import FadeIn from '@components/FadeIn'
 import User from './User'
 
 const makeUsers = users => 
@@ -15,9 +16,11 @@ const Users = () => {
   const userList = makeUsers(users)
 
   return (
-    <ul>
-      {userList}
-    </ul>
+    <FadeIn>
+      <ul>
+        {userList}
+      </ul>
+    </FadeIn>
   )
 }
 
