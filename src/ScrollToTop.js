@@ -7,7 +7,6 @@ import { useLocation } from 'react-router-dom'
 class ScrollToTop extends Component {
 	componentDidUpdate(prevProps) {
 		if (this.props.pathname !== prevProps.pathname) {
-      console.log(this.props.pathname)
       setTimeout(() => {window.scrollTo(0, 0)}, 0)
 		}
 	}

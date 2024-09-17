@@ -1,15 +1,16 @@
 import React from 'react'
 import '@testing-library/jest-dom'
-
-import App from "../App"
-
 import { render, screen } from '@testing-library/react'
+
+import { TestApp } from "../App"
 
 describe('App', () => {
   test('sanity', () => {
-    render(<App />)
-    const appContainer = screen.getByText('app')
-    expect(appContainer).toBeTruthy()
+    const { asFragment } = render(<TestApp />)
+    
+    expect(asFragment()).toMatchSnapshot()
 
+    const homeLink = screen.getByText('Home')
+    expect(homeLink).toBeTruthy()
   })
 })

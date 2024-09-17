@@ -22,16 +22,20 @@ const Login = () => {
     }, [user, isFetchingUser])
 
   const onSubmit = () => 
-    setUser({ id: 42 })
+    setUser({ name: 'Jo' })
   
   return (
-    <div className="login-form">
-      <button 
-        tabIndex={0}
-        onKeyDown={onKeyDownEnter(onSubmit)}
-        onClick={onSubmit}
-      >log in</button>
+    <div>
+      <h1>Please log in.</h1>
+      <div className="login-form">
+        <button 
+          tabIndex={0}
+          onKeyDown={onKeyDownEnter(onSubmit)}
+          onClick={onSubmit}
+        >log in</button>
+      </div>
     </div>
+
   )
 }
 

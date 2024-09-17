@@ -8,13 +8,13 @@ module.exports = {
       "root": ["./"],
       "alias": {
         "@components": "./src/components",
-        "@img": "./src/assets/img",
         "@constants": "./src/constants",
         "@http": "./src/http",
-        "@store": "./src/store",
+        "@img": "./src/assets/img",
         "@src": "./src",
+        "@store": "./src/store",
         "@utils": "./src/utils"
-      }
+      }      
     }]
   ]
 }

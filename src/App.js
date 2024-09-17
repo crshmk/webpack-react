@@ -1,5 +1,7 @@
 import React from 'react'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, MemoryRouter } from 'react-router-dom'
+
+import './index.css'
 
 import FadeIn from '@components/FadeIn'
 import Nav from '@components/Nav'
@@ -7,18 +9,16 @@ import Providers from '@store/Providers'
 import Routes from './Routes'
 import ScrollToTop from './ScrollToTop'
 
-import './index.css'
-
 const View = () => (
   <FadeIn>
     <div className="view">
-        <Nav />
-        <Routes />
+      <Nav />
+      <Routes />
     </div>
   </FadeIn>
 )
 
-const App = () => (
+export const App = () => (
   <Router>
   <ScrollToTop />
   <Providers>
@@ -29,3 +29,10 @@ const App = () => (
 
 export default App
 
+export const TestApp = () => (
+  <MemoryRouter initialEntries={['/']}>
+  <Providers>
+  <View />
+  </Providers>
+  </MemoryRouter>
+)
