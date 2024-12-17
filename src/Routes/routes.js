@@ -1,5 +1,6 @@
 import { lazy } from 'react'
 
+const Chat = lazy(() => import('@components/Chat'))
 const Home = lazy(() => import('@components/Home'))
 const Login = lazy(() => import('@components/Login'))
 const Dashboard = lazy(() => import('@components/Dashboard'))
@@ -11,6 +12,10 @@ export default [
   {
     path: '/',
     Component: Home
+  },
+  {
+    path: '/chat',
+    Component: Chat
   },
   {
     path: '/dashboard',

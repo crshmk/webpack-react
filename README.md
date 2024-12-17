@@ -10,6 +10,7 @@ This is a way to organize a React app with context for state management. If you 
 - CSS modules 
 - React Testing Library
 - Axios wrapper
+- socket.io (connects to sample server [here](https://github.com/crshmk/express-setup))
 - code splitting for prod builds
 - meta tags for social media 
 - simple rsync script for deployment
